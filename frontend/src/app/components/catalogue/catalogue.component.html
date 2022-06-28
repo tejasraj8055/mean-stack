@@ -1,0 +1,32 @@
+
+<section>
+  <div class="header">
+    <div>
+      <h3 class="cart">Cart : {{cart.length}}</h3>
+    </div>
+    <div>
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card" *ngFor="let product of product" >
+          <div class="card-image" (click)="getIndividualProduct(product._id)">
+            <img src={{product.image}} alt="">
+          </div>
+          <div class="card-title">{{product.name}}</div>
+          <p class="card-info">Rs.{{product.cost}}</p>
+          <!-- <p class="card-info">{{product.info}}</p> -->
+          <button (click)="addCart(product.name)">Add to cart</button>
+
+    </div>
+    </div>
+    <!-- <div *ngFor="let cart of cart">
+      {{cart}} - Buy
+  </div> -->
+    <div>
+      <Button class='btn' type="submit" (click)="checkout()">Checkout</Button>
+    </div>
+</section>
+
+
+

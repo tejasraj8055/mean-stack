@@ -1,0 +1,10 @@
+<section>
+  <h2>Add Item</h2>
+  <form (ngSubmit)="onSubmit()" class="form-group">
+    <input class="form-control" type="text" [(ngModel)]="name" name="name" id="name" placeholder="Enter name" required="true">
+    <input class="form-control" type="number" [(ngModel)]="cost" name="cost" id="cost" placeholder="Enter cost" required="true">
+    <input class="form-control" type="text" [(ngModel)]="info" name="info" id="info" placeholder="Enter description" required="true">
+    <input class="form-control" type="text" [(ngModel)]="image" name="image" id="image" placeholder="Enter image address" required="true">
+    <input class="form-control" type="submit" value="Submit">
+  </form>
+</section>
